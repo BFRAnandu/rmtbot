@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "discord.js": "^12.4.1",
+    "is-port-reachable": "^3.0.0",
+    "is-reachable": "^5.0.0",
+    "ping": "^0.3.0"
+  },
+  "name": "rmtbot",
+  "version": "1.0.0",
+  "description": "checks rmt services",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

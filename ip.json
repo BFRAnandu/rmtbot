@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Backup Server",
+        "domain": "Backup-Server.home.robinsmediateam.dev"
+    },
+    {
+        "name": "Chris VPS",
+        "domain": "Chris-VPS.home.robinsmediateam.dev"
+    },
+    {
+        "name": "MainAD",
+        "domain": "eminem.home.robinsmediateam.dev"
+    },
+    {
+        "name": "FalloverAD",
+        "domain": "ad-failover.home.robinsmediateam.dev"
+    },
+    {
+        "name": "RMTIntranet Jump Server",
+        "domain": "JPServer.home.robinsmediateam.dev"
+    },
+    {
+        "name": "Zeo VPS",
+        "domain": "sidezeo.home.robinsmediateam.dev"
+    },
+    {
+        "name": "WindowsServer",
+        "domain": "windowsserver.home.robinsmediateam.dev"
+    },
+    {
+        "name": "ZEO-SFTP",
+        "domain": "sftpserverzeo.home.robinsmediateam.dev"
+    },
+    {
+        "name": "FreeNAS",
+        "domain": "freenas.home.robinsmediateam.dev"
+    }
+]
