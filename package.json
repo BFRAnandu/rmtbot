@@ -1,8 +1,6 @@
 {
   "dependencies": {
     "discord.js": "^12.4.1",
-    "is-port-reachable": "^3.0.0",
-    "is-reachable": "^5.0.0",
     "ping": "^0.3.0"
   },
   "name": "rmtbot",
