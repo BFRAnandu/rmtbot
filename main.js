@@ -22,7 +22,7 @@ const ipJSON = JSON.parse(rawListOfIPs);
 
 const interval = 15; //define interval in minutes
 const intervalInSeconds = interval*60; //define in secods
-const env = "test"; //define what type of environment, can either be prod or test
+const env = "prod"; //define what type of environment, can either be prod or test
 
 //initialize list variables
 var globalWorkingServices = [];
@@ -107,6 +107,7 @@ function outputToDiscord(){
     title="**RMT Service Status check for: "+actualDate+"**\n";
     createMessageLists(":white_check_mark:", "Working Services", globalWorkingServices);
     createMessageLists(":x:", "Broken Services", globalNotWorkingServices);
+    createMessageLists(":x:", "Abnormal Services", globalNeutralServices);
     message+="\n"
     createMessageLists(":white_check_mark:", "Alive Machines", globalWorkingIPs);
     createMessageLists(":x:", "Dead Machines", globalNotWorkingIPs);
