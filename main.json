@@ -1,0 +1,54 @@
+{
+    "vms": [
+        {
+            "name": "Chris VPS",
+            "domain": "Chris-VPS.home.robinsmediateam.dev"
+        },
+        {
+            "name": "MainAD",
+            "domain": "eminem.home.robinsmediateam.dev"
+        },
+        {
+            "name": "FalloverAD",
+            "domain": "ad-failover.home.robinsmediateam.dev"
+        },
+        {
+            "name": "AdministrationVM",
+            "domain": "AdminVM.home.robinsmediateam.dev"
+        },
+        {
+            "name": "Docker Registry",
+            "domain": "192.168.2.102"
+        },
+        {
+            "name": "Point Blank",
+            "domain": "PointBlank.home.robinsmediateam.dev"
+        },
+        {
+            "name": "Storage-Server",
+            "domain": "192.168.2.167"
+        }
+    ],
+    "websites": [
+        {
+            "name": "Kanboard",
+            "domain": "kan.robinsmediateam.dev"
+        },
+        {
+            "name": "Gitea",
+            "domain": "git.robinsmediateam.dev"
+        },
+        {
+            "name": "CDN",
+            "domain": "cdn.robinsmediateam.dev"
+        },
+        {
+            "name": "Monitor",
+            "domain": "monitor.robinsmediateam.dev"
+        },
+        {
+            "name": "Scin-Website",
+            "domain": "scin.robinsmediateam.dev"
+        }     
+    ]
+}
