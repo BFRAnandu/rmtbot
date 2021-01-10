@@ -49,6 +49,10 @@
         {
             "name": "Scin-Website",
             "domain": "scin.robinsmediateam.dev"
-        }     
+        },
+        {
+            "name": "APT-Repo",
+            "domain": "apt.robinsmediateam.dev"
+        }
     ]
 }
