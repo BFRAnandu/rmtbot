@@ -23,11 +23,6 @@ if(process.env.PROD == "true"){
     console.log("Running in Testing Mode");
 }
 
-// Load main JSON file
-const mainJSON = JSON.parse(fs.readFileSync('./main.json'));
-const vmlist=mainJSON.vms;
-const sitelist=mainJSON.websites;
-
 // Other variables
 const interval = 15;
 
@@ -96,10 +91,18 @@ function pingMachine(domain){
 }
 
 async function main(){
+    // reload main.json everytime main is run
+    const mainJSON = JSON.parse(fs.readFileSync('./main.json'));
+    const vmlist=mainJSON.vms;
+    const sitelist=mainJSON.websites;
+    
+    // set defaults
     let date = getADate();
     let title="**RMT Service Status check for: " + date + "**\n";
     let message = "";
     let pingMaster = false;
+    
+    // generate new clean arrays
     let goodVMs = [];
     let badVMs = [];
     let goodSites = [];
