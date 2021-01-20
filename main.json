@@ -13,8 +13,8 @@
             "domain": "ad-failover.home.robinsmediateam.dev"
         },
         {
-            "name": "Docker Registry",
-            "domain": "192.168.2.102"
+            "name": "Docker VM",
+            "domain": "192.168.2.114"
         },
         {
             "name": "Point Blank",
