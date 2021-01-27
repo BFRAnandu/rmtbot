@@ -43,6 +43,9 @@ spec:
       containers:
       - name: rmtbot
         image: docker.scinorandex.xyz/scinorandex/rmtbot:latest
+        env:
+          - name: PROD
+            value: false
         imagePullPolicy: Always
         volumeMounts:
         - name: rmtbot-config
