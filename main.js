@@ -11,11 +11,11 @@ const sqlite3 = require('sqlite3');
 
 // Login to Discord
 const client = new Discord.Client();
-const { token } = require('./token.json');
+const { token } = require('./mount/token.json');
 
 if(process.env.PROD == "true"){
     var channelID="776714951930281994";
-    var masterUser=["194913844190117888", "208473993374597120"];
+    var masterUser=["194913844190117888"];
     console.log("Running in Production Mode");
 }else{
     var channelID="796677956046159872";
@@ -92,7 +92,7 @@ function pingMachine(domain){
 
 async function main(){
     // reload main.json everytime main is run
-    const mainJSON = JSON.parse(fs.readFileSync('./main.json'));
+    const mainJSON = JSON.parse(fs.readFileSync('./mount/main.json'));
     const vmlist=mainJSON.vms;
     const sitelist=mainJSON.websites;
     
@@ -170,7 +170,7 @@ client.on('ready', async () => {
 client.login(token);
 
 //sqlite
-let db = new sqlite3.Database(`./bot.db`, (err) => {
+let db = new sqlite3.Database(`./mount/bot.db`, (err) => {
     if (err) {
       return console.error(err.message);
     }
