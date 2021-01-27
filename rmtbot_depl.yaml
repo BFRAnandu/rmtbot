@@ -1,0 +1,61 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: rmtbot-pv
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 100Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/home/administrator/rmtbot/mount"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: rmtbot-pvc
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi  
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: rmtbot
+spec:
+  selector:
+    matchLabels:
+      app: rmtbot
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: rmtbot
+    spec:
+      containers:
+      - name: rmtbot
+        image: docker.scinorandex.xyz/scinorandex/rmtbot:latest
+        imagePullPolicy: Always
+        volumeMounts:
+        - name: rmtbot-config
+          mountPath: /app/mount
+        - name: timezone-config
+          mountPath: /etc/localtime
+      restartPolicy: Always
+      volumes:
+        - name: rmtbot-config
+          persistentVolumeClaim:
+            claimName: rmtbot-pvc
+        - name: timezone-config
+          hostPath:
+            path: /etc/localtime
+      imagePullSecrets:
+        - name: regcred
